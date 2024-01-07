@@ -1,0 +1,333 @@
+/* VARIABLES BELOW */
+:root {
+    --fontstyle:'Play', sans-serif;
+    --backim:radial-gradient(rgb(33, 48, 61), black);
+    --shadow: 0 0 10px rebeccapurple;
+    --linkcolor:rgb(226, 29, 216);
+}
+/* Whole app settings */
+* {
+    padding: 0;
+    margin: 0;
+}
+/* Main container/BODY/NOTOUCHY */
+.main-container {
+    width: 100%;
+    height: 100%;
+    background-image:url(background1.png);
+    background-size: 100%;
+}
+
+/* governs .profile and img add background color if desired */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    margin: 10px auto auto auto;
+    height: 300px;
+    border-radius: 20px;
+    background-image:var(--backim);
+    box-shadow:var(--shadow);
+    
+    
+}
+a {text-decoration: none;
+color: var(--linkcolor);}
+
+    
+/* my name, centered at the top of the page. */
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    font-family:var(--fontstyle);
+    color:beige; 
+    text-align: center;
+    border-radius: 15px;
+    font-size: xx-large;
+    
+    
+    }
+
+     /* image settings */
+
+.profile {
+        display: flex;
+        width: 200px;
+        padding: 20px;
+        border-radius: 20px;
+        
+     }
+.profile img{
+width: 200px;
+border-radius: 20px;
+}
+
+/* navbar, mostly invis, bkcolor same as header */
+nav {
+display:flex;
+justify-content: space-around;
+flex-direction:column;
+height: 300px;
+width: 200px;
+text-align: center;    
+font-size: xx-large;
+border-radius: 20px;
+}
+#about-scroll #projects-scroll #contact-scroll:link {
+text-decoration: none;
+color: rgb(0, 0, 0);
+
+}
+#about-scroll #projects-scroll #contact-scroll:visited {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+    }
+
+/* navbar element 1 needs to direct to about me section on page */
+#about-me-link {
+margin: 2px;
+padding: 5px 10px;
+color:var(--linkcolor);
+cursor: pointer;
+list-style-type: none;
+font-family: var(--fontstyle);
+
+}
+
+/* nav element, when clicked should snap to that part of the page, hover color higher in value but same color to add contrast without a box shadow */
+#about-me-link:hover {
+    
+    background-image:var(--backim);
+    transition: .25s;
+    box-shadow:var(--shadow);      
+}
+/* nav element, when clicked should snap to that part of the page, hover color higher in value but same color to add contrast without a box shadow */
+#work-link {
+    margin: 2px;
+    padding: 5px 10px;
+    color:white;
+    cursor: pointer;
+    list-style-type: none;
+    font-family:var(--fontstyle)
+    
+   
+}
+#work-link:hover {
+    
+    background-image:var(--backim);
+    transition: .25s;
+    box-shadow:var(--shadow);
+}
+
+/* nav element, when clicked should snap to that part of the page, hover color higher in value but same color to add contrast without a box shadow */
+#contact-me-link {
+    margin: 2px;
+    padding: 5px 10px;
+    color:white;
+    cursor: pointer;
+    list-style-type: none;
+    font-family:var(--fontstyle)
+}
+
+#contact-me-link:hover {
+    
+    background-image:var(--backim);
+    transition: .25s;
+    box-shadow: var(--shadow);
+}
+
+/* maintain space between nav menu elements */
+#about-me-link+#work-link {
+   margin-top: 10px;
+}
+#work-link+#contact-me-link {
+    margin-top: 10px;
+}
+/* ABOUT ME MAIN SECTION */
+/* HEADER=ABOUTME IS A MARGIN BECAUSE THESE ELEMENTS OVERLAP OTHERWISE */
+.about-me-main {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 10px auto auto auto;
+    height: 200px;
+    border-radius: 20px;
+    background-image:var(--backim);
+    box-shadow:var(--shadow);
+    font-family:var(--fontstyle);
+    
+}
+.about-me-title {
+    
+        text-align: center;
+        margin: 10px auto auto auto;
+        width: 25%;
+        padding:5px;
+        background-image:var(--backim);
+        border-radius: 20px;
+        color: beige;
+        font-family:var(--fontstyle);
+        box-shadow: var(--shadow);
+}
+
+p {
+    width: 100%;
+    color:rebeccapurple;
+    text-align: center;
+    font-size:x-large;
+    margin: 30px 300px 30px 300px;
+    align-content: center;
+     
+}
+/* below is the container for the cards preceded by the div for the h3 */
+
+.work-title {
+    text-align: center;
+    margin: 10px auto auto auto;
+    width: 25%;
+    padding:5px;
+    background-image:var(--backim);
+    border-radius: 20px;
+    color: beige;
+    font-family:var(--fontstyle);
+    box-shadow:var(--shadow);
+
+     
+}
+.work-container {
+width: 50%;
+margin: 10px auto auto auto;
+
+
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    column-gap: 10px;
+    column-count: 3;
+    row-gap: 10px;
+    width: 100%;
+}  
+
+/* below is the formatting for project cards */
+.card {
+display:flex;
+flex: 1 1 400px;
+flex-direction:row;
+height: 400px;
+width: 400px;
+justify-content:center;
+border-radius: 20px;
+text-align: center;
+background-image:var(--backim);
+color: beige;
+box-shadow: 0 0 10px rgb(0, 0, 0);
+font-family:var(--fontstyle);
+box-shadow:var(--shadow);
+
+}
+
+/* classes below size cards per acceptance criteria */
+.firstproject {
+    flex-grow: 1;
+    background-image: url(seo.png);
+    color: rgb(226, 29, 216);
+    align-self: center;
+    
+    
+}
+#click {
+    align-content: center;
+    opacity:0.5 ;
+    width: 100%;
+    color: rgb(226, 29, 216);
+    
+}
+.comingsoon {
+  flex:1;
+  flex-wrap: wrap;
+  text-align:center;
+  color: rgb(226, 29, 216);
+  background-image: url(background1.png);
+}
+.card img {
+height: 100%;
+ border-radius: 20px;
+ margin: 5px;
+ 
+}
+
+/* BEGIN CONTACT ME SECTION, FIRST TITLE THEN CLICKABLE LINKS/CARDS */
+.contact-me-title {
+    text-align: center;
+    margin: 10px auto auto auto;
+    width: 25%;
+    padding:5px;
+    background-image:var(--backim);
+    border-radius: 20px;
+    color: beige;
+    font-family:var(--fontstyle);
+    box-shadow:var(--shadow);;
+    }
+
+    /* MAIN CONT SETTINGS BELOW */
+.contact-me-container {
+    height: 100%;
+    width: 100%;
+    margin: 10px auto auto auto;
+}
+/* FLEX CONT BELOW */
+.contact-me-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    margin: 10px auto auto auto;
+    height: 200px;
+    column-gap: 10px;
+    font-family:var(--fontstyle);
+    box-shadow:var(--shadow);
+    
+}
+#github-link {
+    display: flex;
+    flex: 1 1 400px;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background-image:var(--backim);
+    border-radius: 20px;
+    align-items: center;
+    color: var(--linkcolor);
+}
+
+#email-link {
+    display: flex;
+    flex: 1 1 400px;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background-image:var(--backim);
+    border-radius: 20px;
+    align-items: center;
+    color: var(--linkcolor);
+}
+
+@media screen and (max-width: 600px) {
+.text {
+    font-size: 18px;
+}
+}
+
+    
+    
+
+
+
